@@ -29,6 +29,7 @@ body {
     position: relative;
     top: 10%;
     background-color: grey;
+    box-shadow: inset 0 0 10px #2c2b2a;
     
 }
 
