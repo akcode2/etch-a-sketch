@@ -20,12 +20,17 @@ function calcCellSize(scale) {
     }
 }
 
-// function createGrid() {
-//     const screenWidth = document.querySelector('.screen').clientWidth;
-//     const screenHeight = document.querySelector('.screen').clientHeight;
-//     const container = document.querySelector('.screen');
-//     container.classList.add('')
-// }
+const screen = document.querySelector('.screen')
+
+// Check if screen has been "activated" and make cells if it's inactive
+screen.addEventListener('click', () => {
+    if (screen.classList.contains('inactive')) {
+        createGridDivs();
+        screen.classList.remove('inactive');
+        return 0
+    }
+});
+
 
 
 function createGridDivs() {
@@ -40,4 +45,5 @@ function createGridDivs() {
             grid.appendChild(cell);
         }
     }
+    return 0;
 }

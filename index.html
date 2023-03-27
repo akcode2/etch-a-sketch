@@ -5,18 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <script src="./screen.js" delay></script>
     <title>Etch-a-Sketch</title>
 </head>
 <body>
     <div class="container">
         <div class="toy">
             <div class="frame">
-                <div class="screen"></div>
-                <div class="left-knob"></div>
-                <div class="right-knob"></div>
+                <div class="screen grid-container inactive"></div>
+                <div class="controls">
+                    <div class="left-knob"></div>
+                    <div class="options">
+                        Size:
+                        <div class = "size">
+                            <button value="small">Small</button>
+                            <button value="medium">Medium</button>
+                            <button value="large">Large</button>
+                        </div>
+
+                    </div>
+                    <div class="right-knob"></div>
+                </div>               
             </div>
         </div>
     </div>
+    <script src="./screen.js" delay></script>
 </body>
 </html>
