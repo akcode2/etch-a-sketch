@@ -62,7 +62,7 @@ body {
 }
 
 .right-knob {
-    display: inline-block;
+    /* display: inline-block; */
     position: relative;
     top: -20%;
     right: 2%;
@@ -80,6 +80,6 @@ body {
 
 .cell {
     box-sizing: border-box;
-    border: 1px solid #575757;
+    border: 1px solid #57575744;
 }
 

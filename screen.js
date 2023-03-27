@@ -1,24 +1,29 @@
-let width = 22;
-let height = 16;
-let scale = 'small';
+// let width = getComputedStyle(document.documentElement).getPropertyValue('--columns');
+// let height = getComputedStyle(document.documentElement).getPropertyValue('--rows');
+// let scale = 'small';
 
-function calcCellSize(scale) {
-    const baseWidth = 22;
-    const baseHeight = 16;
+
+
+function changeCellSize(scale) {
+
+    // The HTML document
+    let doc = document.documentElement;
 
     if (scale === 'large') {
-        width = baseWidth * 5;
-        height = baseHeight * 5;
+        doc.style.setProperty('--rows', '64')
+        doc.style.setProperty('--columns', '88')
     }
     else if (scale === 'medium') {
-        width = baseWidth * 3;
-        height = baseHeight * 3;
+        doc.style.setProperty('--rows', '48')
+        doc.style.setProperty('--columns', '66')
     }
     else if (scale === 'small') {
-        width = baseWidth * 1;
-        height = baseHeight * 1;
+        doc.style.setProperty('--rows', '16')
+        doc.style.setProperty('--columns', '22')
     }
 }
+
+
 
 const screen = document.querySelector('.screen')
 
@@ -31,10 +36,22 @@ screen.addEventListener('click', () => {
     }
 });
 
-
+document.querySelectorAll('.size > button').forEach(button => {
+    let scale = button.value;
+    button.addEventListener('click', () => {
+        changeCellSize(scale);
+        createGridDivs();
+    })
+})
 
 function createGridDivs() {
     const grid = document.querySelector('.grid-container');
+    // Clear any existing divs
+    grid.innerHTML = '';
+
+    let width = getComputedStyle(document.documentElement).getPropertyValue('--columns');
+    let height = getComputedStyle(document.documentElement).getPropertyValue('--rows');
+
     for (let i = 0; i < height; i++) {
         for (let j = 0; j < width; j++) {
             const cell = document.createElement('div');
@@ -45,5 +62,7 @@ function createGridDivs() {
             grid.appendChild(cell);
         }
     }
+    // Remove the "inactive" flag from the screen
+    document.querySelector('.screen').classList.remove('inactive');
     return 0;
 }
