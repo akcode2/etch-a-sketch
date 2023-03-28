@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Lobster&family=Montserrat&display=swap');
 :root {
   --frame: #e63946;
   --knobs: #F1FAEE;
@@ -132,16 +132,16 @@ body {
 }
 
 .btn {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Bungee', sans-serif;
     line-height: 1em;
+    font-size: .65em;
     background-color: rgb(255, 183, 3);
     color: rgb(151, 109, 0);
     border: none;
     border-radius: 5px;
-    box-shadow: inset 0px 2px 2px 0px rgba(151, 109, 0, 0.5);
+    box-shadow: inset 0px 2px 2px 0px rgba(151, 109, 0, 0.5), inset 0px -2px 2px 0px rgba(151, 109, 0, 0.5);
     transition: all ease 0.2s;
-    padding: 3px;
-    text-shadow: -1px -1px 1px rgb(196, 141, 3), 1px 1px 1px rgb(196, 141, 3);
+    padding: 3px 6px;
 }
 
 .btn:hover {
