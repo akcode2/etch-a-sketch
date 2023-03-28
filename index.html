@@ -11,17 +11,23 @@
     <div class="container">
         <div class="toy">
             <div class="frame">
+                <div class="name">Etch A Sketch</div>
                 <div class="screen grid-container inactive"></div>
                 <div class="controls">
                     <div class="left-knob"></div>
                     <div class="options">
-                        Size:
-                        <div class = "size">
-                            <button value="small">Small</button>
-                            <button value="medium">Medium</button>
-                            <button value="large">Large</button>
+                        <span class="btn-descriptor">Size:</span>
+                        <div class="size">
+                            <button class="btn" value="small">Small</button>
+                            <button class="btn" value="medium">Medium</button>
+                            <button class="btn" value="large">Large</button>
                         </div>
-
+                        <span class="btn-descriptor">Mode:</span> 
+                        <div class="mode">
+                            <button class="btn" value="default">Default</button>
+                            <button class="btn" value="shading">Shading</button>
+                            <button class="btn" id="gamer" value="rainbow"><span style="color: #6A00F4">G</span><span style="color: #B100E8">A</span><span style="color: #A100F2">M</span><span style="color: #F20089">E</span><span style="color: #00D3DE">R</span></button>
+                        </div>
                     </div>
                     <div class="right-knob"></div>
                 </div>               

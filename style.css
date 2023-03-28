@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&family=VT323&display=swap');
 :root {
   --frame: #e63946;
   --knobs: #F1FAEE;
@@ -22,6 +23,15 @@ body {
     background: var(--frame);
     margin-top: 15px;
     border-radius: 25px;
+    box-shadow: inset 20px 20px 20px 2px rgba(0, 0, 0, 0.25), inset -20px -20px 20px 2px rgba(0, 0, 0, 0.25);
+}
+
+.name {
+    font-family: 'Lobster', cursive;
+    color: rgb(255, 183, 3);
+    font-size: 3rem;
+    position: relative;
+    text-align: center;
 }
 
 .screen {
@@ -29,24 +39,35 @@ body {
     width: 75%;
     margin: auto;
     position: relative;
-    top: 10%;
-    background-color: grey;
-    box-shadow: inset 0 0 10px #2c2b2a;
-    
+    background-color: rgb(189, 195, 199);
+    z-index: 9;
 }
+
 
 .controls {
     display: flex;
     height: 12%;
     position: relative;
-    top: 12%;
+    top: 2%;
     justify-content: space-between;
 }
 
 .options {
     display: flex;
     align-self: center;
-    gap: 10px;
+    gap: 15px;
+    margin-right: auto;
+    margin-left: 4%;
+}
+
+#gamer > span {
+    letter-spacing: .1em;
+    line-height: 1em;
+}
+
+.btn-descriptor {
+    align-self: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .left-knob {
@@ -58,6 +79,7 @@ body {
     width: 11.2%;
     background-color: var(--knobs);
     border-radius: 50%;
+    box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0, 0.25);
     
 }
 
@@ -70,16 +92,34 @@ body {
     width: 11.2%;
     background-color: var(--knobs);
     border-radius: 50%;
+    box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
 .grid-container {
     display: grid;
     grid-template-rows: repeat(var(--rows), 1fr);
     grid-template-columns: repeat(var(--columns), 1fr);
+    box-shadow: inset 0 0 10px #2c2b2a;
 }
 
 .cell {
     box-sizing: border-box;
     border: 1px solid #57575744;
+    z-index: 5;
 }
+
+.btn {
+    /* box-shadow: inset 0px 5px 10px 0px rgba(255, 183, 3, 0.5); */
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1em;
+    background-color: rgb(255, 183, 3);
+    border: 1px solid rgb(255,183,3);
+}
+
+.btn:hover {
+  transform: translateY(1px);
+  box-shadow: inset 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+}
+
+
 
